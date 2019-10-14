@@ -1,0 +1,9 @@
+<div class="messages-content">
+  <div #wrapper class="wrapper">
+    <div class="massages-list">
+      <div *ngFor="let msg of messagesService.msges;" class="message-item">
+        [{{getDate(msg) | date: 'HH:mm' }}] <b>{{msg.getUsername()}}</b>: {{msg.getValue()}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="column">
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <input
+        class="input"
+        type="text"
+        placeholder="say something"
+        [formControl]="message"
+      />
+    </p>
+    <p class="control">
+      <a class="button is-info send-button" (click)="processMessageValue()">Send</a>
+    </p>
+  </div>
+</div>

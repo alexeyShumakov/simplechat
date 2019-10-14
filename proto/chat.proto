@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package chat;
+
+service Messenger {
+    rpc CreateMessage (Message) returns (Message) {}
+    rpc GetCounters (stream Message) returns (stream Counters) {}
+    rpc MessengerChat (stream Message) returns (stream Message) {}
+}
+
+message Message {
+    string value = 1;
+    string created = 2;
+    string userName = 3;
+}
+
+message Counters {
+   int32 totalMessages = 1;
+   int32 usersOnline = 2;
+}

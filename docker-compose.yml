@@ -1,0 +1,11 @@
+version: '3'
+services:
+  back:
+    build: ./back
+    ports:
+      - "9090:9090"
+
+  front:
+    build: ./front
+    ports:
+      - "8080:8080"

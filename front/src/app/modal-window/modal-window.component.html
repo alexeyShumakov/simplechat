@@ -1,0 +1,7 @@
+<div [className]="modalWindowService.isOpen ? 'modal is-active' : 'modal'">
+  <div class="modal-background" (click)="modalWindowService.close()"></div>
+  <div class="modal-content">
+    <div class="box"> {{modalWindowService.text}} </div>
+  </div>
+  <button class="modal-close is-large" aria-label="close" (click)="modalWindowService.close()"></button>
+</div>
