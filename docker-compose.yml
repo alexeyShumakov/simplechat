@@ -1,11 +1,13 @@
 version: '3'
 services:
   back:
-    build: ./back
+    image: "alexeyshumakov/simplechat-back:latest"
+#    build: ./back
     ports:
       - "9090:9090"
 
   front:
-    build: ./front
+    image: "alexeyshumakov/simplechat-front:latest"
+#    build: ./front
     ports:
       - "8080:8080"
